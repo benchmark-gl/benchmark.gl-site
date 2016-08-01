@@ -10,6 +10,9 @@
   },
   "author": "Eli Fitch & Joseph Van Drunen",
   "dependencies": {
+    "foundation-sites": "6.2.3"
+  },
+  "devDependencies": {
     "autoprefixer": "6.1.0",
     "babel-core": "6.9.1",
     "babel-plugin-syntax-trailing-function-commas": "6.5.0",
@@ -23,7 +26,6 @@
     "eslint-config-airbnb": "6.2.0",
     "eslint-plugin-react": "4.3.0",
     "eslintify": "2.0.1",
-    "foundation-sites": "6.2.3",
     "gulp": "3.9.0",
     "gulp-clean-css": "2.0.4",
     "gulp-header": "1.8.2",
@@ -40,7 +42,8 @@
     "gulp-tinify": "1.0.2",
     "gulp-uglify": "1.4.2",
     "gulp-util": "3.0.6",
-    "jquery": "3.0.0",
+    "browser-sync": "2.10.0",
+    "watchify": "3.6.0",
     "loose-envify": "1.1.0",
     "nconf": "0.8.4",
     "run-sequence": "1.1.4",
@@ -50,24 +53,16 @@
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0"
   },
-  "devDependencies": {
-    "browser-sync": "2.10.0",
-    "watchify": "3.6.0"
-  },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
     "foundation": "./node_modules/foundation-sites/js/foundation.core.js",
     "foundation-mediaquery": "./node_modules/foundation-sites/js/foundation.util.mediaQuery.js"
   },
   "browserify-shim": {
-    "jquery": "$",
-    "foundation": { "exports": "Foundation",  "depends": "jquery" },
-    "foundation-mediaquery": { "depends": "foundation" }
   },
   "browserify": {
     "transform": [
-      "babelify",
-      "browserify-shim"
+      "babelify"
     ]
   },
   "engines": {
