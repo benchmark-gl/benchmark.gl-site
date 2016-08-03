@@ -51,8 +51,7 @@ gulp.task('watchify', () => {
 })
 
 gulp.task('sass', () =>
-  // gulp.src('src/static/scss/**/*.scss')
-  gulp.src('src/static/scss/app.scss')
+  gulp.src('src/static/scss/**/*.scss')
     .pipe(plumber())
     .pipe(stylelint({
       syntax: 'scss',
