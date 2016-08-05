@@ -32,7 +32,7 @@
     position: absolute;
     // top: 0;
     top: 1em;
-    right: 0;
+    right: 2em;
     z-index: -1;
 }
 .slanty__title {
@@ -44,6 +44,10 @@
     transform: rotate(3deg);
 }
 
-.slanty__section + .slanty__section {
-    background-color: cyan;
+.slanty__section:nth-child(2) {
+    background-color: #32E2E2;
+}
+
+.slanty__section:nth-child(3) {
+    background-color: #35E98A;
 }
