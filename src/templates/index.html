@@ -11,19 +11,22 @@
             </div>
             <div class="columns medium-6">
                 <div class="header__nav">
-                    <a href="http://github.com/" class="header__link">Github</a>
-                    <a href="http://github.com/" class="header__link">Docs</a>
-                    <a href="http://github.com/" class="header__button">Benchmark</a>
+                    <a href="http://github.com/" class="link header__link">Github</a>
+                    <a href="http://github.com/" class="link header__link">Docs</a>
+                    <a href="http://github.com/" class="button header__button">Benchmark</a>
                 </div>
             </div>
         </div>
     </header>
 
     <div class="hero">
-        <div class="row">
-            <div class="column small-12 medium-8">
+        <div class="row align-middle">
+            <div class="column small-12 medium-7 large-8">
                 <!-- <h2 class="beta">NPM installable WebGL performance data.</h2> -->
                 <h2 class="beta">Reliable WebGL<br>performance data.</h2>
+            </div>
+            <div class="column small-12 medium-5 large-4">
+                <img src="/static/img/explosion.svg" alt="">
             </div>
         </div>
     </div>
@@ -50,19 +53,35 @@
             <div class="slanty__counter">
                 <div class="row">
                     <div class="columns small-12 medium-7">
-                        <p class="copy">The library is an npm installable list of WebGL renderers you can use to pinpoint the performance capabilities of someone using your app. You can weight the performance data so it's even more accurate for your particular use case.</p>
+                        <p class="copy">Install the library</p>
+                        <div class="codey">
+                            <pre class="language-markup"><code class="language-markup">$ npm install --save benchmark.gl</code></pre>
+                        </div>
+                        <p class="copy">Use</p>
+                        <div class="codey">
+                            <pre class="language-javascript"><code class="language-javascript">const bmgl = require("benchmark.gl");
+
+const performanceQuotient = bmgl.calibrate({
+    preset: 'graphics' // or 'compute', 'shader'
+});</code></pre>
+                        </div>
+                        <p class="copy">That's it.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="slanty__section">
             <div class="slanty__title-wrapper">
-                <h1 class="slanty__title">The Benchmark</h1>
+                <h1 class="slanty__title">Contribute</h1>
+                <!-- <h1 class="slanty__title">We need you</h1> -->
             </div>
             <div class="slanty__counter">
                 <div class="row">
                     <div class="columns small-12 medium-7">
-                        <p class="copy">The benchmark tests texture IO, shaders, and computation.  We average and weight them together to get a wholistic view of the performance of a particular GL renderer.</p>
+                        <!-- <p class="copy"><span class="bold">We need you!</span></p> -->
+                        <p class="copy">Benchmark.gl could be the greatest WebGL performance library in the history of all of the times. But we need you to make it special. The more data we have, the more accurate it will be.</p>
+                        <p class="copy">Hit the benchmark with every device you have. Hit it multiple times. Tell your friends. Tell that one cousin you have that nobody likes much you know the one.</p>
+                        <a href="" class="button button--orange">Tweet about it</a><a href="" class="button button--orange">Share it on FB</a>
                     </div>
                 </div>
             </div>

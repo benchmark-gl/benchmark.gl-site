@@ -64,7 +64,7 @@ gulp.task('sass', () =>
     }))
     .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['node_modules/foundation-sites/scss'],
+      includePaths: ['node_modules/foundation-sites/scss', 'node_modules/prismjs/themes'],
     }))
     .pipe(postcss([autoprefixer({
       // see https://github.com/ai/browserslist#queries

@@ -10,7 +10,8 @@
   },
   "author": "Eli Fitch & Joseph Van Drunen",
   "dependencies": {
-    "foundation-sites": "6.2.3"
+    "foundation-sites": "6.2.3",
+    "prismjs": "^1.5.1"
   },
   "devDependencies": {
     "autoprefixer": "6.1.0",
@@ -58,8 +59,7 @@
     "foundation": "./node_modules/foundation-sites/js/foundation.core.js",
     "foundation-mediaquery": "./node_modules/foundation-sites/js/foundation.util.mediaQuery.js"
   },
-  "browserify-shim": {
-  },
+  "browserify-shim": {},
   "browserify": {
     "transform": [
       "babelify"

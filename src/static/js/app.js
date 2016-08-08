@@ -1,1 +1,1 @@
-
+const Prism = require('prismjs');

@@ -40,6 +40,7 @@
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
 @include foundation-flex-classes;
+@import 'prism';
 
 // Add BEM component imports/includes here
 @import 'fonts';
@@ -47,6 +48,9 @@
 @import 'type';
 @import 'utilities';
 
+@import './components/link';
+@import './components/button';
 @import './components/header';
 @import './components/slanty';
 @import './components/hero';
+@import './components/codey';

@@ -1,0 +1,14 @@
+.codey {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @media #{$medium-up} {
+        display: inline-block;
+    }
+    pre {
+        border-radius: 0.1em;
+    }
+}
