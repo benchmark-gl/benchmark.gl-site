@@ -1,0 +1,44 @@
+.footer {
+    // padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: right;
+}
+.footer__copy {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+        height: 1.2em;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+    img.footer__comic-sans {
+        height: 0.8em;
+    }
+}
+.footer__hand {
+    img {
+        height: 1.5em;
+    }
+    &:hover {
+        animation: shake 0.15s infinite;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
