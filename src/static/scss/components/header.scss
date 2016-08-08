@@ -42,25 +42,11 @@ $nav-nudge: 0.95em;
 }
 
 .header__button {
+    backface-visibility: hidden;
     color: #fafafa;
     text-decoration: none;
     position: relative;
     display: inline-block;
-    text-transform: uppercase;
-    margin-right: 2em;
-    letter-spacing: 0.2em;
-    border: 0.05em solid #fafafa;
-    border-radius: 0.1em;
-    padding: 0.5em;
-    transition: 0.15s;
-    &:hover {
-        background-color: fuchsia;
-        border-color: fuchsia;
-        color: #111;
-    }
-}
-
-.header__button {
     padding: 0.75em;
     transition: all 0.4s;
     border: none;
@@ -71,6 +57,8 @@ $nav-nudge: 0.95em;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
     background-size: 100% $border-width, $border-width 100%, 100% $border-width, $border-width 100%;
     transform: translateY($nav-nudge);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     &:after {
         opacity: 1;
         transition: 0s all;
@@ -94,16 +82,15 @@ $nav-nudge: 0.95em;
         transform-origin: center;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%)rotate(-45deg);
+        transform: translate(-50%, -50%)rotate(-24deg);
         background-image: linear-gradient(to left, $green 0%, $blue 100%);
         transition: all 0.4s;
         z-index: -1;
     }
     &:hover {
-        // letter-spacing: 0.1em;
         cursor: pointer;
         &:before {
-            width: 100%;
+            width: 110%;
         }
     }
 }
