@@ -2,6 +2,9 @@
     overflow: hidden;
     padding-top: 3%;
     padding-bottom: 3%;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 .slanty__section {
     background-color: fuchsia;
@@ -11,6 +14,7 @@
     transform: rotate(-3deg)translateZ(0);
     backface-visibility: hidden;
     position: relative;
+    border-radius: 0.000001px;
     &:before,
     &:after {
         content: '';

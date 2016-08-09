@@ -7,21 +7,29 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    img {
+    > img {
         height: 1.2em;
         margin-left: 0.3rem;
         margin-right: 0.3rem;
     }
-    img.footer__comic-sans {
-        height: 0.8em;
-    }
 }
 .footer__hand {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
     img {
         height: 1.5em;
     }
     &:hover {
         animation: shake 0.15s infinite;
+    }
+}
+.footer__comic-sans {
+    margin-left: 0.3rem;
+    &:after {
+        bottom: 0;
+    }
+    img {
+        height: 0.8em;
     }
 }
 

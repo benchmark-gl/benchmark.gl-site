@@ -7,7 +7,7 @@
     <header class="header">
         <div class="row align-bottom">
             <div class="columns medium-6">
-                <h1 class="alpha">Benchmark.GL</h1>
+                <a href="" class="link"><h1 class="alpha">Benchmark.GL</h1></a>
             </div>
             <div class="columns medium-6">
                 <div class="header__nav">
@@ -21,12 +21,17 @@
 
     <div class="hero">
         <div class="row align-middle">
-            <div class="column small-12 medium-7 large-8">
+            <div class="column small-12 medium-7 large-6">
                 <!-- <h2 class="beta">NPM installable WebGL performance data.</h2> -->
-                <h2 class="beta">Reliable WebGL<br>performance data.</h2>
+                <!-- <h2 class="beta">Reliable WebGL<br>performance data.</h2> -->
+                <h2 class="beta">WebGL performance data<br>you can count on.</h2>
             </div>
-            <div class="column small-12 medium-5 large-4">
-                <img src="/static/img/explosion.svg" alt="">
+            <div class="column small-12 medium-5 large-6">
+                <!-- <img src="/static/img/explosion-trimmed.svg" alt=""> -->
+                <div class="logo-vid">
+                    <video class="logo-vid" id="logo-vid" src="" poster="/static/img/explosion-poster.png"></video>
+                    <div class="logo-vid__hit-area"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -41,7 +46,7 @@
                     <div class="columns small-12 medium-7">
                         <!-- <p class="copy"><span class="bold">Benchmark.GL</span> is a WebGL benchmark & library.  The more
                         people who use the benchmark, the more accurate the library will be.</p> -->
-                        <p class="copy">Graphics information exposed by the WebGL API is unreliable and doesn't allow an approximation of performance. We record the GL renderer name and match it with benchmark results. The more people use the benchmark, the more accurate we'll be.</p>
+                        <p class="copy">Graphics information exposed by the WebGL API is unreliable and doesn't give you an approximation of performance. We record the GL renderer name and match it with benchmark results. The more people use the benchmark, the more accurate we'll be.</p>
                     </div>
                 </div>
             </div>
@@ -76,12 +81,14 @@ const performanceQuotient = bmgl.calibrate({
                 <!-- <h1 class="slanty__title">We need you</h1> -->
             </div>
             <div class="slanty__counter">
-                <div class="row">
+                <div class="row align-middle">
                     <div class="columns small-12 medium-7">
-                        <p class="copy">Benchmark.gl could be the greatest WebGL performance library in the history of all of the times. But we need you to make it special. The more data we have, the more accurate it will be.</p>
+                        <p class="copy">Benchmark.gl can be the greatest WebGL performance library in the history of all of the times. But we need you to make it special! The more data we have, the more accurate it will be.</p>
                         <p class="copy">Hit the benchmark with every device you have. Hit it multiple times. Tell your friends. Tell that one cousin you have that nobody likes much you know the one.</p>
-                        <a href="" class="button button--orange">Hit it</a><a href="" class="button button--orange">Tweet it</a><a href="" class="button button--orange">Faceboook it</a>
-                        <p class="copy">Oh we also accept PRs or whatever you know the deal.</p>
+                        <a href="" class="button button--orange">Tweet it</a><a href="" class="button button--orange">Faceboook it</a>
+                    </div>
+                    <div class="columns small-12 medium-5 u-text-center">
+                        <a href="" class="button button--orange">Benchmark it</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +98,11 @@ const performanceQuotient = bmgl.calibrate({
 <footer class="footer">
     <div class="row">
         <div class="columns small-12">
-            <p class="footer__copy">Made with <img src="/static/img/bolt.svg" alt=""> in <img src="/static/img/dc.svg" alt=""> by <a class="footer__hand" href="http://eli.wtf"><img src="/static/img/rad-hand.png" alt=""></a> &&nbsp;<a href="http://github.com/ramshacklejamathon" class="link"><img class="footer__comic-sans" src="/static/img/joe.svg" alt=""></a></p>
+            <p class="footer__copy">
+                Made with <img src="/static/img/bolt.svg" alt="">
+                in <img src="/static/img/dc.svg" alt="">
+                by <a class="footer__hand" href="http://eli.wtf" target="_blank"><img src="/static/img/rad-hand.png" alt=""></a>
+                &<a href="http://github.com/Ramshackle-Jamathon" class="link footer__comic-sans" target="_blank"><img src="/static/img/joe.svg" alt=""></a></p>
         </div>
     </div>
 </footer>
