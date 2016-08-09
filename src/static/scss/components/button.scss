@@ -1,6 +1,6 @@
 $turq: turquoise;
-$fuch: fuchsia;
-$orange: orange;
+// $orange: orange;
+// $orange: #FFDC3D;
 $border-width: 0.1em;
 .button {
     backface-visibility: hidden;
@@ -12,7 +12,7 @@ $border-width: 0.1em;
     transition: all 0.4s;
     border: none;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to left, $orange 0%, $fuch 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuch 0%, $orange 100%), linear-gradient(to top, $fuch 0%, $fuch 100%);
+    background-image: linear-gradient(to left, $orange 0%, $fuchsia 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuchsia 0%, $orange 100%), linear-gradient(to top, $fuchsia 0%, $fuchsia 100%);
     overflow: hidden;
     z-index: 1;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
@@ -30,7 +30,7 @@ $border-width: 0.1em;
         top: 0;
         left: 0;
         background-repeat: no-repeat;
-        background-image: linear-gradient(to left, $orange 0%, $fuch 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuch 0%, $orange 100%), linear-gradient(to top, $fuch 0%, $fuch 100%);
+        background-image: linear-gradient(to left, $orange 0%, $fuchsia 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuchsia 0%, $orange 100%), linear-gradient(to top, $fuchsia 0%, $fuchsia 100%);
         background-position: 0 0, 100% 0, 100% 100%, 0 100%;
         background-size: 100% $border-width, $border-width 100%, 100% $border-width, $border-width 100%;
     }
@@ -43,7 +43,7 @@ $border-width: 0.1em;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)rotate(-24deg);
-        background-image: linear-gradient(to left, $orange 0%, $fuch 100%);
+        background-image: linear-gradient(to left, $orange 0%, $fuchsia 100%);
         transition: all 0.4s;
         z-index: -1;
     }
@@ -59,11 +59,11 @@ $border-width: 0.1em;
 }
 
 .button--orange {
-    background-image: linear-gradient(to left, $orange 0%, $fuch 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuch 0%, $orange 100%), linear-gradient(to top, $fuch 0%, $fuch 100%);
+    background-image: linear-gradient(to left, $orange 0%, $fuchsia 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuchsia 0%, $orange 100%), linear-gradient(to top, $fuchsia 0%, $fuchsia 100%);
     &:after {
-        background-image: linear-gradient(to left, $orange 0%, $fuch 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuch 0%, $orange 100%), linear-gradient(to top, $fuch 0%, $fuch 100%);
+        background-image: linear-gradient(to left, $orange 0%, $fuchsia 100%), linear-gradient(to bottom, $orange 0%, $orange 100%), linear-gradient(to right, $fuchsia 0%, $orange 100%), linear-gradient(to top, $fuchsia 0%, $fuchsia 100%);
     }
     &:before {
-        background-image: linear-gradient(to left, $orange 0%, $fuch 100%);
+        background-image: linear-gradient(to left, $orange 0%, $fuchsia 100%);
     }
 }
