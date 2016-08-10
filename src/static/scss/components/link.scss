@@ -1,5 +1,6 @@
 .link {
-    color: #fafafa;
+    // color: #fafafa;
+    color: inherit;
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -10,7 +11,8 @@
         display: block;
         width: 100%;
         height: .1em;
-        bottom: -0.3em;
+        // bottom: -0.3em;
+        bottom: -0.1em;
         position: absolute;
         transform-origin: right;
         transform: scale(0,1);
@@ -21,5 +23,11 @@
     &:hover:after {
         transform-origin: left;
         transform: scale(1,1);
+    }
+}
+
+.link--cyan {
+    &:after {
+        background-color: cyan;
     }
 }

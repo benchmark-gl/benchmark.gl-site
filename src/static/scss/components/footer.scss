@@ -1,5 +1,5 @@
 .footer {
-    // padding-top: 1em;
+    padding-top: 0.5em;
     padding-bottom: 1em;
     text-align: right;
 }
@@ -11,6 +11,10 @@
         height: 1.2em;
         margin-left: 0.3rem;
         margin-right: 0.3rem;
+    }
+    font-size: 0.75em;
+    @media #{$medium-up} {
+        font-size: 1em;
     }
 }
 .footer__hand {

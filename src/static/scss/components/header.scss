@@ -3,10 +3,23 @@ $nav-nudge: 0.95em;
     padding-top: 2em;
     padding-bottom: 2em;
 }
+.header__title {
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 3.5vw;
+    @media #{$medium-up} {
+        font-size: 1em;
+    }
+}
 .header__nav {
-    margin: 0;
-    text-align: right;
+    // margin: 0;
     transform: translateY(-$nav-nudge);
+    margin-top: 1em;
+    // text-align: center;
+    @media #{$large-up} {
+        margin: 0;
+        text-align: right;
+    }
 }
 .header__link {
     letter-spacing: 0.2em;
@@ -14,6 +27,9 @@ $nav-nudge: 0.95em;
     text-transform: uppercase;
     &:last-child {
         margin-right: 0;
+    }
+    &:after {
+        bottom: -0.3em;
     }
 }
 
