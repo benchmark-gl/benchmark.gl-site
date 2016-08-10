@@ -19,7 +19,8 @@ $border-width: 0.1em;
     background-size: 100% $border-width, $border-width 100%, 100% $border-width, $border-width 100%;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-right: 2em;
+    // margin-right: 2em;
+    margin-right: 1em;
     margin-bottom: 1em;
     &:after {
         opacity: 1;
