@@ -1,4 +1,5 @@
 .modal {
+    transition: all 0.4s ease-out;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,5 +27,15 @@
 }
 
 .modal--benchmark-success {
-    display: none;
+    // display: none;
+    background-image: linear-gradient(#40e0c3, cyan);
+}
+
+.modal--out {
+    opacity: 0;
+    transform: translate3d(-50%, -30%, 0);
+    pointer-events: none;
+    @media #{$medium-up} {
+        transform: translate3d(-50%, -30%, 0)rotate(-3deg);
+    }
 }

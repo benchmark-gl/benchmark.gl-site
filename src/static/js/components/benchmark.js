@@ -5,7 +5,8 @@ import {addClass} from '../lib/dommy';
 
 const isBenchmarking = document.getElementById('benchmark') ? true : false;
 const progressShroud = document.getElementById('progress-shroud');
-const startBenchmark = document.getElementById('start-benchmark');
+const startBenchmarkButton = document.getElementById('start-benchmark');
+const introModal = document.getElementById('benchmark-intro');
 
 // if (isBenchmarking) {
 //   benchmarks.run(function(res){
@@ -23,7 +24,16 @@ const startBenchmark = document.getElementById('start-benchmark');
 
 //   // }, 2000);
 // }
-startBenchmark.onclick = kickoff;
+startBenchmarkButton.onclick = function() {
+  addClass(introModal, 'modal--out');
+  setTimeout(function() {
+    kickoff();
+    introModal.parentNode.removeChild(introModal);
+  }, 400); //animduration
+};
+// startBenchmarkButton.addEventListener('transitionend', function() {
+//   console.log('asdfasf')
+// });
 
 function kickoff() {
   mockBench(function(res){

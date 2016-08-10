@@ -6,16 +6,22 @@
     <!-- <video class="logo-vid" id="benchmark-vid" autoplay loop src="/static/img/explosion.mp4" poster="/static/img/explosion-poster.png"></video> -->
     <div class="modal modal--benchmark-intro" id="benchmark-intro">
         <div class="modal__inner">
-            <div class="delta" style="transform: translateX(-0.06em);">Just a heads up</div>
-            <p class="copy--small">This is a pretty intense benchmark, and your device might run slowly. That's totally okay! It won't last longer than 16 seconds, we promise.</p>
+            <div class="delta">Just a heads up</div>
+            <p class="copy--small">This is a pretty intense benchmark, and your device might run slowly. That's totally okay! It won't last longer than 20 seconds, we promise.</p>
             <div class="u-text-center">
                 <button class="button button--boring" id="start-benchmark">Start</button>
             </div>
         </div>
     </div>
 
-    <div class="modal modal--benchmark-success" id="benchmark-intro">
-
+    <div class="modal modal--benchmark-success modal--out" id="benchmark-intro">
+        <div class="modal__inner">
+            <div class="delta">Whew, we're done</div>
+            <p class="copy--small">Thank you for supporting the Benchmark.GL project! Go ahead and run the benchmark again on another device, or share this out to Facebook &amp; Twitter.</p>
+            <div class="u-text-center">
+                <a class="button button--boring" id="start-benchmark">Tweet it</a> <a class="button button--boring" id="start-benchmark">Facebook it</a>
+            </div>
+        </div>
     </div>
 
     <div class="progress">
