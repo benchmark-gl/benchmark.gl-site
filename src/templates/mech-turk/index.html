@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<main id="benchmark">
+    <!-- <video class="logo-vid" id="benchmark-vid" autoplay loop src="/static/img/explosion.mp4" poster="/static/img/explosion-poster.png"></video> -->
+    <div class="modal modal--benchmark-intro" id="benchmark-intro">
+        <div class="modal__inner">
+            <div class="delta" style="transform: translateX(-0.06em);">Just a heads up</div>
+            <p class="copy--small">This is a pretty intense benchmark, and your device might run slowly. That's totally okay! It won't last longer than 16 seconds, we promise.</p>
+            <div class="u-text-center">
+                <button class="button button--boring" id="start-benchmark">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--benchmark-success" id="benchmark-intro">
+
+    </div>
+
+    <div class="progress">
+        <div class="progress__shroud" id="progress-shroud"></div>
+    </div>
+</main>
+
+{% endblock %}
+
+{% block javascripts %}
+{{ super() }}
+{% endblock %}

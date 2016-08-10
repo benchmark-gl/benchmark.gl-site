@@ -13,10 +13,14 @@ function getVideoEl() {
 
 function loadVideo() {
   return new Promise((resolve, reject) => {
-    const video = getVideoEl();
-    video.src = '/static/img/explosion.mp4';
-    video.load();
-    resolve(video);
+    const video = document.getElementById('logo-vid');
+    if (video) {
+      video.src = '/static/img/explosion.mp4';
+      video.load();
+      resolve(video);
+    } else {
+      reject('no video element');
+    }
   })
 }
 
@@ -46,4 +50,6 @@ function playVideo(video) {
 
 loadVideo().then(vid => {
   playVideo(vid);
+}).catch(err => {
+  console.warn(err);
 });

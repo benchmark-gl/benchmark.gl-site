@@ -10,6 +10,7 @@
   },
   "author": "Eli Fitch & Joseph Van Drunen",
   "dependencies": {
+    "benchmark.gl-benchmarks": "^0.1.6",
     "foundation-sites": "6.2.3",
     "prismjs": "^1.5.1"
   },
