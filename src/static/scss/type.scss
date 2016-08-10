@@ -22,11 +22,10 @@ p,
     line-height: 1.4;
     font-size: 1.2em;
     margin-bottom: 1em;
-    &:last-child {
-        margin-bottom: 0;
-    }
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
 }
-
 .bold {
     font-weight: bold;
 }

@@ -54,7 +54,6 @@
     @media #{$medium-up} {
         font-size: 6em;
     }
-    // transform: translateY(-0.1em);
 }
 .slanty__counter {
     transform: rotate(3deg);
@@ -66,4 +65,11 @@
 
 .slanty__section:nth-child(3) {
     background-color: #35E98A;
+}
+.slanty__sub-head {
+    color: rgba(0,0,0,0.5);
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.2em;
 }

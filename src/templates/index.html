@@ -25,7 +25,7 @@
                 <!-- <h2 class="beta">NPM installable WebGL performance data.</h2> -->
                 <!-- <h2 class="beta">Reliable WebGL<br>performance data.</h2> -->
                 <!-- <h2 class="beta">WebGL performance data<br>you can count on.</h2> -->
-                <h2 class="beta">Real deal WebGL performance data</h2>
+                <h2 class="beta">Real deal open source WebGL performance data</h2>
             </div>
             <div class="column small-12 medium-5 large-6">
                 <!-- <img src="/static/img/explosion-trimmed.svg" alt=""> -->
@@ -44,10 +44,34 @@
             </div>
             <div class="slanty__counter">
                 <div class="row">
-                    <div class="columns small-12 medium-7">
-                        <!-- <p class="copy"><span class="bold">Benchmark.GL</span> is a WebGL benchmark & library.  The more
-                        people who use the benchmark, the more accurate the library will be.</p> -->
+                    {# <div class="columns small-12 medium-7">
                         <p class="copy">Graphics information exposed by the WebGL API is unreliable and doesn't give you an approximation of performance. We record the GL renderer name and match it with benchmark results, so you know exactly what to expect from a user's GPU. <span class="color-dark bold">The more people that use the <a href="" class="link link--cyan">benchmark</a>, the more accurate we'll be.</span></p>
+                    </div>
+                    <div class="columns small-12 medium-7">
+                        <p class="copy u-mb-1">GPU info exposed by the WebGL API is <span class="bold color-dark">unreliable</span> and doesn't give you performance data. <span class="bold color-dark">We fix that.<span></p>
+                    </div> #}
+                    <div class="columns small-12 medium-7">
+                        <p class="copy">The WebGL API does expose some information about your GPU.  Unfortunately, not only is this info sometimes inaccurate, but it don’t really give you an idea of the performance you can expect a device to have.</p>
+                        <p class="copy"><span class="bold color-dark">We fix that.<span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns small-12 large-6">
+                        <div class="slanty__sub-head" style="transform: translateX(-0.06em);">Benchmark</div>
+                        <p class="copy">Benchmark.GL stress tests GPUs and stores the results.  The <span class="bold color-dark">more people</span> who hit the benchmark, the <span class="bold color-dark">more accurate</span> the data will be.</p>
+                        {# <a href="" class="link link--alt link--cyan">>Benchmark</a> #}
+                    </div>
+                    <div class="columns small-12 large-6">
+                        <div class="slanty__sub-head" style="transform: translateX(-0.06em);">Open Data</div>
+                        <p class="copy">We then take that data, normalize it, and dump it into an NPM package. You use it to calibrate your WebGL apps to match the capabilities of your users' devices.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns small-12 large-6">
+                        <a href="" class="button button--boring">GPU Benchmark</a>
+                    </div>
+                    <div class="columns small-12 large-6">
+                        <a href="" class="button button--boring">Calibration Library</a>
                     </div>
                 </div>
             </div>
@@ -84,12 +108,11 @@ const performanceQuotient = bmgl.calibrate({
             <div class="slanty__counter">
                 <div class="row align-middle">
                     <div class="columns small-12 medium-7">
-                        <p class="copy">Benchmark.gl can be the greatest WebGL performance library in the history of all of the times. But we need you to make it special! The more data we have, the more accurate it will be.</p>
+                        <p class="copy">We need you to make Benchmark.GL work! The more data we have, the more accurate it will be.</p>
                         <p class="copy">Hit the benchmark with every device you have. Hit it multiple times. Tell your friends. Tell that one cousin you have that nobody likes much you know the one.</p>
-                        <a href="" class="button button--orange">Tweet it</a><a href="" class="button button--orange">Faceboook it</a>
-                    </div>
-                    <div class="columns small-12 medium-5 u-text-center">
-                        <a href="" class="button button--orange">Benchmark it</a>
+                        <a href="" class="button button--boring u-mb-1">Hit the benchmark</a>
+                        <a href="" class="button button--boring u-mb-1">Tweet it</a>
+                        <a href="" class="button button--boring u-mb-1">Faceboook it</a>
                     </div>
                 </div>
             </div>
