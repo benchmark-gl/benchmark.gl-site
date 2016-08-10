@@ -54,6 +54,9 @@ body {
 }
 
 html {
-    font-size: 20px;
+    font-size: 16px;
+    @media #{$medium-up} {
+        font-size: 20px;
+    }
     font-family: $geomanist;
 }

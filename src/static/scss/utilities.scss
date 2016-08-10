@@ -1,3 +1,10 @@
 .u-text-center {
     text-align: center;
 }
+
+.u-small-text-center {
+    text-align: center;
+    @media #{$medium-up} {
+        text-align: inherit;
+    }
+}

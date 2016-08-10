@@ -8,8 +8,8 @@
 }
 .slanty__section {
     background-color: fuchsia;
-    padding-top: 8em;
-    padding-bottom: 4em;
+    padding-top: 6em;
+    padding-bottom: 3em;
     transform-style: preserve-3d;
     transform: rotate(-3deg)translateZ(0);
     backface-visibility: hidden;
@@ -32,18 +32,28 @@
     &:after {
         right: calc(-50% + 1px);
     }
+    @media #{$medium-up} {
+        padding-top: 8em;
+        padding-bottom: 4em;
+    }
 }
 .slanty__title-wrapper {
     // overflow: hidden;
     position: absolute;
     // top: 0;
     top: 1em;
-    right: 0.8em;
+    right: 0em;
     z-index: -1;
+    @media #{$large-up} {
+        right: 0.8em;
+    }
 }
 .slanty__title {
     color: rgba(0,0,0,0.2);
-    font-size: 6em;
+    font-size: 4em;
+    @media #{$medium-up} {
+        font-size: 6em;
+    }
     // transform: translateY(-0.1em);
 }
 .slanty__counter {
