@@ -34,7 +34,7 @@ $nav-nudge: 0.95em;
 }
 
 .header__button {
-    transform: translateY($nav-nudge);
+    transform: translateY(1+$nav-nudge);
     display: inline-block;
     margin-right: 0;
 }
