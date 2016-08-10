@@ -1,12 +1,16 @@
 // import benchmarks from 'benchmark.gl-benchmarks';
 import mockBench from './mock-bench';
 import progress from './progress';
-import {addClass} from '../lib/dommy';
+import {addClass, removeClass} from '../lib/dommy';
+import cuid from 'cuid';
 
 const isBenchmarking = document.getElementById('benchmark') ? true : false;
 const progressShroud = document.getElementById('progress-shroud');
 const startBenchmarkButton = document.getElementById('start-benchmark');
 const introModal = document.getElementById('benchmark-intro');
+const successModal = document.getElementById('benchmark-success');
+
+const MODAL_ANIMATION_DURATION = 400;
 
 // if (isBenchmarking) {
 //   benchmarks.run(function(res){
@@ -29,7 +33,7 @@ startBenchmarkButton.onclick = function() {
   setTimeout(function() {
     kickoff();
     introModal.parentNode.removeChild(introModal);
-  }, 400); //animduration
+  }, MODAL_ANIMATION_DURATION);
 };
 // startBenchmarkButton.addEventListener('transitionend', function() {
 //   console.log('asdfasf')
@@ -47,9 +51,13 @@ function kickoff() {
   });
 
   function complete() {
-    const bmvid = document.getElementById('benchmark-vid');
-    const success = document.getElementById('benchmark-vid');
-    bmvid.pause();
-    addClass(bmvid, 'none');
+    removeClass(successModal, 'modal--out');
+    const cuidContainer = document.getElementById('cuid');
+    console.log(cuid());
+    cuidContainer.innerHTML = cuid();
+    // const bmvid = document.getElementById('benchmark-vid');
+    // const success = document.getElementById('benchmark-vid');
+    // bmvid.pause();
+    // addClass(bmvid, 'none');
   }
 }

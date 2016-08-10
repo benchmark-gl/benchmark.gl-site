@@ -1,5 +1,5 @@
 export default function run(cb) {
-  const INTERVAL = 500;
+  const INTERVAL = 50;
   var results = {
       gpu: 'foo',
       completed: 0,
