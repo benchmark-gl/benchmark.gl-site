@@ -55,6 +55,27 @@ function kickoff() {
     const cuidContainer = document.getElementById('cuid');
     console.log(cuid());
     cuidContainer.innerHTML = cuid();
+
+    const request = new XMLHttpRequest();
+    request.open('POST', process.env.API_GATEWAY, true);
+
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        // Success!
+        var data = JSON.parse(request.responseText);
+        console.log(data);
+      } else {
+        // We reached our target server, but it returned an error
+        console.error('err');
+      }
+    };
+
+    request.onerror = function() {
+      // There was a connection error of some sort
+      console.error('error');
+    };
+
+    request.send();
     // const bmvid = document.getElementById('benchmark-vid');
     // const success = document.getElementById('benchmark-vid');
     // bmvid.pause();
