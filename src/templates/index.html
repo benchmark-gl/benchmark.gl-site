@@ -39,80 +39,92 @@
 
     <div class="slanty">
         <section class="slanty__section">
-            <div class="slanty__title-wrapper">
-                <h1 class="slanty__title">WTF is this</h1>
-            </div>
-            <div class="slanty__counter">
-                <div class="row">
-                    {# <div class="columns small-12 medium-7">
-                        <p class="copy">Graphics information exposed by the WebGL API is unreliable and doesn't give you an approximation of performance. We record the GL renderer name and match it with benchmark results, so you know exactly what to expect from a user's GPU. <span class="color-dark bold">The more people that use the <a href="" class="link link--cyan">benchmark</a>, the more accurate we'll be.</span></p>
+            <div class="row">
+                <div class="columns small-12" style="position: relative">
+                    <div class="slanty__title-wrapper">
+                        <h1 class="slanty__title">WTF is this</h1>
                     </div>
-                    <div class="columns small-12 medium-7">
-                        <p class="copy u-mb-1">GPU info exposed by the WebGL API is <span class="bold color-dark">unreliable</span> and doesn't give you performance data. <span class="bold color-dark">We fix that.<span></p>
-                    </div> #}
-                    <div class="columns small-12 medium-7">
-                        <p class="copy">The WebGL API does expose some information about your GPU.  Unfortunately, not only is this info sometimes inaccurate, but it don’t really give you an idea of the performance you can expect a device to have.</p>
-                        <p class="copy"><span class="bold color-dark">We fix that.<span></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="columns small-12 large-6">
-                        <div class="slanty__sub-head" style="transform: translateX(-0.06em);">Benchmark</div>
-                        <p class="copy">Benchmark.GL stress tests GPUs and stores the results.  The <span class="bold color-dark">more people</span> who hit the benchmark, the <span class="bold color-dark">more accurate</span> the data will be.</p>
-                        {# <a href="" class="link link--alt link--cyan">>Benchmark</a> #}
-                    </div>
-                    <div class="columns small-12 large-6">
-                        <div class="slanty__sub-head" style="transform: translateX(-0.06em);">Open Data</div>
-                        <p class="copy">We then take that data, normalize it, and dump it into an NPM package. You use it to calibrate your WebGL apps to match the capabilities of your users' devices.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="columns small-12 large-6">
-                        <a href="" class="button button--boring">GPU Benchmark</a>
-                    </div>
-                    <div class="columns small-12 large-6">
-                        <a href="" class="button button--boring">Calibration Library</a>
+                    <div class="slanty__counter">
+                        <div class="row">
+                            {# <div class="columns small-12 medium-7">
+                                <p class="copy">Graphics information exposed by the WebGL API is unreliable and doesn't give you an approximation of performance. We record the GL renderer name and match it with benchmark results, so you know exactly what to expect from a user's GPU. <span class="color-dark bold">The more people that use the <a href="" class="link link--cyan">benchmark</a>, the more accurate we'll be.</span></p>
+                            </div>
+                            <div class="columns small-12 medium-7">
+                                <p class="copy u-mb-1">GPU info exposed by the WebGL API is <span class="bold color-dark">unreliable</span> and doesn't give you performance data. <span class="bold color-dark">We fix that.<span></p>
+                            </div> #}
+                            <div class="columns small-12 medium-7">
+                                <p class="copy">The WebGL API does expose some information about your GPU.  Unfortunately, not only is this info sometimes inaccurate, but it don’t really give you an idea of the performance you can expect a device to have.</p>
+                                <p class="copy"><span class="bold">We fix that.<span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="columns small-12 large-6">
+                                <div class="slanty__sub-head" style="transform: translateX(-0.06em);">Benchmark</div>
+                                <p class="copy">Benchmark.GL stress tests GPUs and stores the results.  The <span class="bold">more people</span> who hit the benchmark, the <span class="bold">more accurate</span> the data will be.</p>
+                                {# <a href="" class="link link--alt link--cyan">>Benchmark</a> #}
+                            </div>
+                            <div class="columns small-12 large-6">
+                                <div class="slanty__sub-head" style="transform: translateX(-0.06em);">Open Data</div>
+                                <p class="copy">We then take that data, normalize it, and dump it into an NPM package. You use it to calibrate your WebGL apps to match the capabilities of your users' devices.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="columns small-12 large-6">
+                                <a href="" class="button button--boring">GPU Benchmark</a>
+                            </div>
+                            <div class="columns small-12 large-6">
+                                <a href="" class="button button--boring">Calibration Library</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="slanty__section">
-            <div class="slanty__title-wrapper">
-                <h1 class="slanty__title">Quickstart</h1>
-            </div>
-            <div class="slanty__counter">
-                <div class="row">
-                    <div class="columns small-12 medium-7">
-                        <p class="copy">Install the library</p>
-                        <div class="codey">
-                            <pre class="language-markup"><code class="language-markup">$ npm install --save benchmark.gl</code></pre>
-                        </div>
-                        <p class="copy">Use</p>
-                        <div class="codey">
-                            <pre class="language-javascript"><code class="language-javascript">const bmgl = require("benchmark.gl");
+            <div class="row">
+                <div class="columns small-12 u-relative">
+                    <div class="slanty__title-wrapper">
+                        <h1 class="slanty__title">Quickstart</h1>
+                    </div>
+                    <div class="slanty__counter">
+                        <div class="row">
+                            <div class="columns small-12 medium-7">
+                                <p class="copy">Install the library</p>
+                                <div class="codey">
+                                    <pre class="language-markup"><code class="language-markup">$ npm install --save benchmark.gl</code></pre>
+                                </div>
+                                <p class="copy">Use</p>
+                                <div class="codey">
+                                    <pre class="language-javascript"><code class="language-javascript">const bmgl = require("benchmark.gl");
 
 const performanceQuotient = bmgl.calibrate({
     preset: 'graphics' // or 'compute', 'shader'
 });</code></pre>
+                                </div>
+                                <p class="copy">That's it.</p>
+                            </div>
                         </div>
-                        <p class="copy">That's it.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="slanty__section">
-            <div class="slanty__title-wrapper">
-                <h1 class="slanty__title">Contribute</h1>
-                <!-- <h1 class="slanty__title">We need you</h1> -->
-            </div>
-            <div class="slanty__counter">
-                <div class="row align-middle">
-                    <div class="columns small-12 medium-8 large-7">
-                        <p class="copy">We need you to make Benchmark.GL work! The more data we have, the more accurate it will be.</p>
-                        <p class="copy">Hit the benchmark with every device you have. Hit it multiple times. Tell your friends. Tell that one cousin you have that nobody likes much you know the one.</p>
-                        <a href="" class="button button--boring u-mb-1">Hit the benchmark</a>
-                        <a href="" class="button button--boring u-mb-1">Tweet it</a>
-                        <a href="" class="button button--boring u-mb-1">Faceboook it</a>
+            <div class="row">
+                <div class="columns small-12 u-relative">
+                    <div class="slanty__title-wrapper">
+                        <h1 class="slanty__title">Contribute</h1>
+                        <!-- <h1 class="slanty__title">We need you</h1> -->
+                    </div>
+                    <div class="slanty__counter">
+                        <div class="row align-middle">
+                            <div class="columns small-12 medium-8 large-7">
+                                <p class="copy">We need you to make Benchmark.GL work! The more data we have, the more accurate it will be.</p>
+                                <p class="copy">Hit the benchmark with every device you have. Hit it multiple times. Tell your friends. Tell that one cousin you have that nobody likes much you know the one.</p>
+                                <a href="" class="button button--boring u-mb-1">Hit the benchmark</a>
+                                <a href="" class="button button--boring u-mb-1">Tweet it</a>
+                                <a href="" class="button button--boring u-mb-1">Faceboook it</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
