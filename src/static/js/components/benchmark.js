@@ -1,4 +1,4 @@
-// import benchmarks from 'benchmark.gl-benchmarks';
+import benchmarks from 'benchmark.gl-benchmarks';
 import mockBench from './mock-bench';
 import progress from './progress';
 import {addClass, removeClass} from '../lib/dommy';
@@ -12,22 +12,6 @@ const successModal = document.getElementById('benchmark-success');
 
 const MODAL_ANIMATION_DURATION = 400;
 
-// if (isBenchmarking) {
-//   benchmarks.run(function(res){
-//   //  console.log(res);
-//     if (res.remaining > 0) {
-//       //benchmark still running
-//       //update progress bar
-//     } else {
-//       //benchmark complete
-//       //show thank you
-//     }
-//   });
-//   // setTimeout(function() {
-//   //   //benchmarks running
-
-//   // }, 2000);
-// }
 startBenchmarkButton.onclick = function() {
   addClass(introModal, 'modal--out');
   setTimeout(function() {
@@ -35,50 +19,53 @@ startBenchmarkButton.onclick = function() {
     introModal.parentNode.removeChild(introModal);
   }, MODAL_ANIMATION_DURATION);
 };
-// startBenchmarkButton.addEventListener('transitionend', function() {
-//   console.log('asdfasf')
-// });
 
 function kickoff() {
-  mockBench(function(res){
-    if (res.remaining > -1) {
-      let percentDone = (res.completed/8) * 100;
+  console.log('running');
+  let numberOfBenchmarks;
+  benchmarks.run(function(res){
+    if (numberOfBenchmarks === undefined) {
+      numberOfBenchmarks = res.remainingBenchmarks + 1;
+    }
+    if (res.remainingBenchmarks > -1) {
+      console.log(res);
+      let percentDone = (res.completedBenchmarks/numberOfBenchmarks) * 100;
       progress(progressShroud, percentDone);
-      if (res.remaining === 0) {
-        complete();
+      if (res.remainingBenchmarks === 0) {
+        complete(res);
       }
     }
   });
+}
 
-  function complete() {
-    removeClass(successModal, 'modal--out');
-    const cuidContainer = document.getElementById('cuid');
-    console.log(cuid());
-    cuidContainer.innerHTML = cuid();
+function complete(results) {
+  removeClass(successModal, 'modal--out');
+  const cuidContainer = document.getElementById('cuid');
+  console.log(cuid());
+  cuidContainer.innerHTML = cuid();
 
-    const request = new XMLHttpRequest();
-    request.open('POST', process.env.API_GATEWAY, true);
+  const request = new XMLHttpRequest();
+  request.open('POST', process.env.API_GATEWAY, true);
 
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        // Success!
-        var data = JSON.parse(request.responseText);
-        console.log(data);
-      } else {
-        // We reached our target server, but it returned an error
-        console.error('err');
-      }
-    };
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var data = JSON.parse(request.responseText);
+      console.log(data);
+    } else {
+      // We reached our target server, but it returned an error
+      console.error('err');
+    }
+  };
 
-    request.onerror = function() {
-      // There was a connection error of some sort
-      console.error('error');
-    };
+  request.onerror = function() {
+    // There was a connection error of some sort
+    console.error('error');
+  };
 
-    request.send();
-    // const bmvid = document.getElementById('benchmark-vid');
-    // const success = document.getElementById('benchmark-vid');
-    // bmvid.pause();
-    // addClass(bmvid, 'none');
-  }
+  request.send();
+  // const bmvid = document.getElementById('benchmark-vid');
+  // const success = document.getElementById('benchmark-vid');
+  // bmvid.pause();
+  // addClass(bmvid, 'none');
 }
