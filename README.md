@@ -54,6 +54,7 @@ Sensitive shit goes in `env.js`
 
 ## Deploy
 
+* `npm run build`
 * Remove `public` from gitignore.
 * `git add public && git commit -m 'some commit msg'`
 * `git subtree push --prefix dist origin gh-pages`

@@ -29,9 +29,7 @@ function playVideo(video) {
     const endtime = 0.7;
 
     video.addEventListener('timeupdate', function() {
-      console.log(this.currentTime);
        if (this.currentTime >= endtime) {
-          console.log('stop');
           this.pause();
         }
     }, false);
@@ -51,5 +49,5 @@ function playVideo(video) {
 loadVideo().then(vid => {
   playVideo(vid);
 }).catch(err => {
-  console.warn(err);
+  // console.warn(err);
 });
