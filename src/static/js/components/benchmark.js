@@ -3,12 +3,14 @@ import mockBench from './mock-bench';
 import progress from './progress';
 import {addClass, removeClass} from '../lib/dommy';
 import cuid from 'cuid';
+import request from 'superagent';
 
 const isBenchmarking = document.getElementById('benchmark') ? true : false;
 const progressShroud = document.getElementById('progress-shroud');
 const startBenchmarkButton = document.getElementById('start-benchmark');
 const introModal = document.getElementById('benchmark-intro');
 const successModal = document.getElementById('benchmark-success');
+const bmvid = document.getElementById('benchmark-vid');
 
 const MODAL_ANIMATION_DURATION = 400;
 
@@ -17,12 +19,15 @@ startBenchmarkButton.onclick = function() {
   setTimeout(function() {
     kickoff();
     introModal.parentNode.removeChild(introModal);
+    removeClass(bmvid, 'logo-vid--hide');
   }, MODAL_ANIMATION_DURATION);
 };
 
 function kickoff() {
   console.log('running');
   let numberOfBenchmarks;
+  // complete(dummy);
+
   benchmarks.run(function(res){
     if (numberOfBenchmarks === undefined) {
       numberOfBenchmarks = res.remainingBenchmarks + 1;
@@ -32,6 +37,7 @@ function kickoff() {
       let percentDone = (res.completedBenchmarks/numberOfBenchmarks) * 100;
       progress(progressShroud, percentDone);
       if (res.remainingBenchmarks === 0) {
+        console.log('done');
         complete(res);
       }
     }
@@ -41,31 +47,22 @@ function kickoff() {
 function complete(results) {
   removeClass(successModal, 'modal--out');
   const cuidContainer = document.getElementById('cuid');
-  console.log(cuid());
-  cuidContainer.innerHTML = cuid();
+  const cuidString = cuid();
+  cuidContainer.innerHTML = cuidString;
+  results.mechTurkId = cuidString;
 
-  const request = new XMLHttpRequest();
-  request.open('POST', process.env.API_GATEWAY, true);
 
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      // Success!
-      var data = JSON.parse(request.responseText);
-      console.log(data);
-    } else {
-      // We reached our target server, but it returned an error
-      console.error('err');
-    }
-  };
+  request
+    .post(process.env.API_GATEWAY)
+    .set('Content-Type', 'application/json')
+    .send(results)
+    .end((err, res) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(res);
+      }
+    });
 
-  request.onerror = function() {
-    // There was a connection error of some sort
-    console.error('error');
-  };
-
-  request.send();
-  // const bmvid = document.getElementById('benchmark-vid');
-  // const success = document.getElementById('benchmark-vid');
-  // bmvid.pause();
-  // addClass(bmvid, 'none');
+  addClass(bmvid, 'logo-vid--hide');
 }
