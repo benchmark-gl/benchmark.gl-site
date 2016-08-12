@@ -18,7 +18,14 @@ gulp.task('build:production', (done) => {
 
 gulp.task('watch', ['build', 'watchify'], () => {
   browserSync({
-    server: 'public',
+    // server: 'public',
+    server: {
+      baseDir: 'public',
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
+    },
     files: 'public/**/*',
   })
 

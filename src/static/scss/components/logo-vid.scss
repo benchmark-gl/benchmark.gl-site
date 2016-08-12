@@ -2,6 +2,11 @@
     position: relative;
     width: 100%;
     max-width: 1000px;
+    transition: 0.2s;
+    opacity: 1;
+}
+.logo-vid--hide {
+    opacity: 0;
 }
 .logo-vid__hit-area {
     position: absolute;

@@ -17,6 +17,24 @@ h2,
     line-height: 1.4;
 }
 
+h3,
+.gamma {
+    color: rgba(0,0,0,0.5);
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.2em;
+}
+
+h3,
+.delta {
+    color: rgba(0,0,0,0.5);
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0.2em;
+}
+
 p,
 .copy {
     line-height: 1.4;
@@ -25,6 +43,11 @@ p,
     // &:last-child {
     //     margin-bottom: 0;
     // }
+}
+.copy--small {
+    line-height: 1.4;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
 .bold {
     font-weight: bold;

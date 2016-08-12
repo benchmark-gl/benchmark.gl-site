@@ -59,6 +59,9 @@ $border-width: 0.1em;
     &:last-child {
         margin-right: 0;
     }
+    &:focus {
+        outline: 1px solid rgba(0,0,0,0.6);
+    }
 }
 
 .button--orange {
