@@ -50,26 +50,15 @@ npm run tinify
 
 ## Configuration
 
-[nconf](https://github.com/indexzero/nconf) is used to handle configuration which lives in `config.js`.
+Sensitive shit goes in `env.js`
 
-All configuration variables should be defined in the `nconf.defaults` and it should be indicated if they are required.
+## Deploy
 
-The configuration is passed to [envyify](https://github.com/zertosh/loose-envify) for transforming with browserify. This
-means you can use `process.env.FOO` in your browserified JavaScript files and the appropriate environment variable
-will be substituted during the build process to be shipped in the browser.
+* Remove `public` from gitignore.
+* `git add public && git commit -m 'some commit msg'`
+* `git subtree push --prefix dist origin gh-pages`
 
-__🔐 TIP:__ Don't leak secret keys, neither by commmitting them nor by passing them to browserify. If the var you are
-using should be kept secret, you should not add it to `config.js`.
-
-
-__⏱ TIP:__ If the config var is an amount of time, specify the units in the var name:
-
-```
-nconf.defaults({
-  TIMEOUT_MS: 2000,
-  EXPIRATION_S: 3
-})
-```
+It's shitty but it'll do for now.
 
 ## Foundation
 
