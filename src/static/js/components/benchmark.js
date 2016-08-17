@@ -48,10 +48,13 @@ if (isBenchmarking) {
   function complete(results) {
     removeClass(successModal, 'modal--out');
     const cuidContainer = document.getElementById('cuid');
-    const cuidString = cuid();
-    cuidContainer.innerHTML = cuidString;
-    results.mechTurkId = cuidString;
-
+    if (cuidContainer) {
+      const cuidString = cuid();
+      cuidContainer.innerHTML = cuidString;
+      results.mechTurkId = cuidString;
+    } else {
+      results.mechTurkId = {};
+    }
 
     request
       .post(process.env.API_GATEWAY)

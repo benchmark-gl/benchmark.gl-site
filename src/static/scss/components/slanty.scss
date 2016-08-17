@@ -60,17 +60,18 @@
     transform: rotate(3deg);
 }
 
-.slanty__section:nth-child(2) {
+.slanty__section--blue {
     // background-color: #32E2E2;
     background-image: linear-gradient(#40e0c3, cyan);
 }
 
-.slanty__section:nth-child(3) {
+.slanty__section--green {
     background-color: #35E98A;
     // background-image: linear-gradient(#fdc800, #fde000);
     // background-image: linear-gradient(#fda500, #fdc800);
     background-image: linear-gradient(#37ea75, #5bf390);
 }
+
 .slanty__sub-head {
     color: rgba(0,0,0,0.5);
     font-size: 4em;
