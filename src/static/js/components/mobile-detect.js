@@ -1,5 +1,5 @@
 import MobileDetect from 'mobile-detect';
-import { addClass, removeClass } from '../lib/dommy';
+import { removeClass } from '../lib/dommy';
 
 function isMobile(ua) {
   const md = new MobileDetect(ua);
