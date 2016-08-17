@@ -1,9 +1,0 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
-
-# TEAM
-
-    @EliFitch - http://eli.wtf
-    @RamshackleJamathon - http://neverwork.in/
-
-# THANKS
