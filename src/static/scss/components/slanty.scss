@@ -42,9 +42,13 @@
     // overflow: hidden;
     position: absolute;
     // top: 1em;
-    top: -7em;
+    // top: -7em;
+    top: -5em;
     right: 0em;
     z-index: -1;
+    @media #{$medium-up} {
+        top: -7em;
+    }
     @media #{$large-up} {
         right: 0.8em;
     }
