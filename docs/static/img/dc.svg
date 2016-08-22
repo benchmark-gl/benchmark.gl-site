@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="29px" height="20px" viewBox="0 0 29 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-287.000000, -974.000000)" fill="#FF003B">
+            <g id="Footer" transform="translate(120.000000, 972.000000)">
+                <g id="Group" transform="translate(167.000000, 2.000000)">
+                    <polygon id="Star" points="4.18118467 5.17241379 2.13315243 6.23798964 2.52429178 3.98106378 0.867398898 2.38270002 3.15716855 2.05341898 4.18118467 0 5.20520079 2.05341898 7.49497044 2.38270002 5.83807755 3.98106378 6.22921691 6.23798964"></polygon>
+                    <rect id="Rectangle" x="0" y="8.27586207" width="28.5714286" height="4.13793103"></rect>
+                    <rect id="Rectangle" x="0" y="15.862069" width="28.5714286" height="4.13793103"></rect>
+                    <polygon id="Star" points="13.9372822 5.17241379 11.88925 6.23798964 12.2803893 3.98106378 10.6234965 2.38270002 12.9132661 2.05341898 13.9372822 0 14.9612983 2.05341898 17.251068 2.38270002 15.5941751 3.98106378 15.9853145 6.23798964"></polygon>
+                    <polygon id="Star" points="23.6933798 5.17241379 21.6453476 6.23798964 22.0364869 3.98106378 20.379594 2.38270002 22.6693637 2.05341898 23.6933798 0 24.7173959 2.05341898 27.0071656 2.38270002 25.3502727 3.98106378 25.741412 6.23798964"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

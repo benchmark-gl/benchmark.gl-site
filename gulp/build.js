@@ -35,11 +35,11 @@ function bundle() {
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/static/js/'))
+    .pipe(gulp.dest('docs/static/js/'))
 }
 
 
-gulp.task('clean', () => del('public/'))
+gulp.task('clean', () => del('docs/'))
 
 gulp.task('browserify', () => bundle())
 
@@ -86,7 +86,7 @@ gulp.task('sass', () =>
     })]))
     .pipe(sourcemaps.write())
     .pipe(plumber.stop())
-    .pipe(gulp.dest('public/static/css/')))
+    .pipe(gulp.dest('docs/static/css/')))
 
 gulp.task('nunjucks', () =>
   gulp.src(['src/templates/**/*.html', '!**/_*'])
@@ -95,8 +95,8 @@ gulp.task('nunjucks', () =>
       throwOnUndefined: true,
     }))
     .pipe(plumber.stop())
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
 
 gulp.task('extras', () =>
   gulp.src(EXTRAS_GLOB)
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
