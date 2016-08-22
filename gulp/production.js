@@ -11,30 +11,30 @@ import header from 'gulp-header'
 
 
 gulp.task('rev', () =>
-  gulp.src(['public/**/*', '!**/*.html', '!**/*.txt', '!**/*.ico'])
+  gulp.src(['docs/**/*', '!**/*.html', '!**/*.txt', '!**/*.ico'])
     .pipe(rev())
-    .pipe(gulp.dest('public/'))
+    .pipe(gulp.dest('docs/'))
     .pipe(rev.manifest())
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
 
 gulp.task('rev:replace', ['rev'], () => {
-  const manifest = gulp.src('public/rev-manifest.json')
-  return gulp.src('public/**/*')
+  const manifest = gulp.src('docs/rev-manifest.json')
+  return gulp.src('docs/**/*')
     .pipe(revReplace({
       manifest,
     }))
-    .pipe(gulp.dest('public/'))
+    .pipe(gulp.dest('docs/'))
 })
 
 gulp.task('purifycss', () =>
-  gulp.src('public/**/*-*.css')
-    .pipe(purifycss(['public/**/*.js', 'public/**/*.html'], { minify: true }))
-    .pipe(gulp.dest('public/')))
+  gulp.src('docs/**/*-*.css')
+    .pipe(purifycss(['docs/**/*.js', 'docs/**/*.html'], { minify: true }))
+    .pipe(gulp.dest('docs/')))
 
 gulp.task('critical', () =>
-  gulp.src('public/**/*.html')
+  gulp.src('docs/**/*.html')
     .pipe(critical.stream({
-      base: 'public/',
+      base: 'docs/',
       inline: true,
       dimensions: [{
         width: 1336,  // desktop
@@ -47,10 +47,10 @@ gulp.task('critical', () =>
         height: 640,
       }],
     }))
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
 
 gulp.task('minify:html', () =>
-  gulp.src(['public/**/*.html'])
+  gulp.src(['docs/**/*.html'])
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
@@ -66,19 +66,19 @@ gulp.task('minify:html', () =>
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
     }))
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
 
 gulp.task('minify:css', () =>
-  gulp.src('public/**/*-*.css')
+  gulp.src('docs/**/*-*.css')
     .pipe(cleancss())
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
 
 gulp.task('minify:js', () =>
-  gulp.src('public/**/*-*.js')
+  gulp.src('docs/**/*-*.js')
     .pipe(uglify({
       preserveComments: 'license',
       compressor: {
         screw_ie8: true,
       }
     }))
-    .pipe(gulp.dest('public/')))
+    .pipe(gulp.dest('docs/')))
